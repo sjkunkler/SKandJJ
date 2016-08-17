@@ -1,13 +1,13 @@
 
 /* Background Images
 -------------------------------------------------------------------*/
-var  pageTopImage = jQuery('#page-top').data('background-image');
+var  pageTopImage = jQuery('#home').data('background-image');
 var  weddingImage = jQuery('#wedding').data('background-image');
 var  aboutImage = jQuery('#about').data('background-image');
 var  subscribeImage = jQuery('#subscribe').data('background-image');
 var  contactImage = jQuery('#contact').data('background-image');
 
-if (pageTopImage) {  jQuery('#page-top').css({ 'background-image':'url(' + pageTopImage + ')' }); };
+if (pageTopImage) {  jQuery('#home').css({ 'background-image':'url(' + pageTopImage + ')' }); };
 if (weddingImage) {  jQuery('#wedding').css({ 'background-image':'url(' + weddingImage + ')' }); };
 if (aboutImage) {  jQuery('#about').css({ 'background-image':'url(' + aboutImage + ')' }); };
 if (subscribeImage) {  jQuery('#subscribe').css({ 'background-image':'url(' + subscribeImage + ')' }); };
@@ -20,61 +20,81 @@ if (contactImage) {  jQuery('#contact').css({ 'background-image':'url(' + contac
 
 /* Document Ready function
 -------------------------------------------------------------------*/
-jQuery(document).ready(function($) {
+$(document).ready(function() { 
 	"use strict";
 
-
+	//Animated scrolling		   
+	$('ul.mainmenu a').click(function() {
+		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+			var $target = $(this.hash);
+			$target = $target.length && $target || $('[id=' + this.hash.slice(1) +']');
+			if ($target.length) {
+				$('ul.mainmenu li').removeClass('active');
+				$(this).parent('li').addClass('active');
+				var targetOffset = $target.offset().top-100;
+				$('html,body').animate({scrollTop: targetOffset}, 1000);
+				return false;
+			}
+		}
+	});
+  
+	// Scroll Down Link
+	$('.scrolldown').click(function() {
+		var targetOffset = $('div.blockquote').offset().top-80;
+		$('html,body').animate({scrollTop: targetOffset}, 1000);
+	});
+  
 	// Menu Scroll Hide
-	// var nav = $('.menubar');
-	// var scroll = $('.menubar').attr('data-scroll');
-	// $(function(){
-	// 	$('.menubar').data('size','big');
-	// 	if (scroll == 'false') {
-	// 		nav.css({
-	// 			marginTop:'0px'
-	// 		});
-	// 	};
-	// });
-	// $(window).scroll(function(){
-	// 	if ($('body').scrollTop() > 0 && scroll == 'true') {
-	// 		if (nav.data('size') == 'big') {
-	// 			nav.data('size','small').stop().animate({
-	// 				marginTop:'0px'
-	// 			}, 300);
-	// 		}
-	// 	} else {
-	// 		if (nav.data('size') == 'small' && scroll == 'true') {
-	// 			nav.data('size','big').stop().animate({
-	// 				marginTop:'-80px'
-	// 			}, 300);
-	// 		}
+	var nav = $('.menubar');
+	var scroll = $('.menubar').attr('data-scroll');
+	$(function(){
+		$('.menubar').data('size','big');
+		if (scroll == 'false') {
+			nav.css({
+				marginTop:'0px'
+			});
+		};
+	});
+	$(window).scroll(function(){
+		if ($('body').scrollTop() > 0 && scroll == 'true') {
+			if (nav.data('size') == 'big') {
+				nav.data('size','small').stop().animate({
+					marginTop:'0px'
+				}, 300);
+			}
+		} else {
+			if (nav.data('size') == 'small' && scroll == 'true') {
+				nav.data('size','big').stop().animate({
+					marginTop:'-80px'
+				}, 300);
+			}
 			
-	// 	}
-	// });
+		}
+	});
 
-    /* Window Height Resize
-    -------------------------------------------------------------------*/
-    var windowheight = jQuery(window).height();
-    if(windowheight > 650)
-    {
-         $('.pattern').removeClass('height-resize');
-    }
-    /* Window Height Resize End
-    -------------------------------------------------------------------*/
+  //   /* Window Height Resize
+  //   -------------------------------------------------------------------*/
+  //   var windowheight = jQuery(window).height();
+  //   if(windowheight > 650)
+  //   {
+  //        $('.pattern').removeClass('height-resize');
+  //   }
+  //   /* Window Height Resize End
+  //   -------------------------------------------------------------------*/
 
 
     
 	/* Main Menu   
 	-------------------------------------------------------------------*/
-	$('#main-menu #headernavigation').onePageNav({
-		currentClass: 'active',
-		changeHash: false,
-		scrollSpeed: 750,
-		scrollThreshold: 0.5,
-		scrollOffset: 0,
-		filter: '',
-		easing: 'swing'
-	});  
+	// $('#main-menu #headernavigation').onePageNav({
+	// 	currentClass: 'active',
+	// 	changeHash: false,
+	// 	scrollSpeed: 750,
+	// 	scrollThreshold: 0.5,
+	// 	scrollOffset: 0,
+	// 	filter: '',
+	// 	easing: 'swing'
+	// });  
 
 	/* Main Menu End  
 	-------------------------------------------------------------------*/
@@ -138,7 +158,7 @@ jQuery(document).ready(function($) {
   -------------------------------------------------------------------*/
     $(".news-letter").ajaxChimp({
         callback: mailchimpResponse,
-        //url: "http://jeweltheme.us10.list-manage.com/subscribe/post?u=a3e1b6603a9caac983abe3892&amp;id=257cf1a459" // Replace your mailchimp post url inside double quote "".  
+        url: "" // http://jeweltheme.us10.list-manage.com/subscribe/post?u=a3e1b6603a9caac983abe3892&amp;id=257cf1a459" // Replace your mailchimp post url inside double quote "".  
     });
 
     function mailchimpResponse(resp) {
