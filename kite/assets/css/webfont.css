@@ -13,6 +13,11 @@
 
 }
 
+@font-face {
+  font-family: "nhand";
+  src:url("../fonts/NikolaidisHand.ttf") format("truetype");
+}
+
 [data-icon]:before {
   font-family: "dripicons";
   content: attr(data-icon);
