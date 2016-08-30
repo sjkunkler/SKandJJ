@@ -3,10 +3,10 @@ if($_REQUEST['first_name'] == '' || $_REQUEST['contact_email'] == '' ||  $_REQUE
   return "error";
 endif;
 if (filter_var($_REQUEST['contact_email'], FILTER_VALIDATE_EMAIL)):
-  $subject = 'Email from kite Demo Page'; // Subject of your email
+  $subject = 'Wedding RSVP'; // Subject of your email
 
   // Receiver email address
-  $to = 'labudiu@gmail.com';  //Change the email address by yours
+  $to = 'skandjj@gmail.com';  //Change the email address by yours
  
 
   // prepare header
