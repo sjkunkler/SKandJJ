@@ -28,6 +28,11 @@
   src:url("../fonts/MelanyLaneW01Bold.ttf") format("truetype");
 }
 
+/*@font-face {
+  font-family: "Gill";
+  src:url("../fonts/GillSansMT.ttf") format("truetype");
+}*/
+
 [data-icon]:before {
   font-family: "dripicons";
   content: attr(data-icon);
