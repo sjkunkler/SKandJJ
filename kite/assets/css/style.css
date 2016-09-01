@@ -22,6 +22,7 @@ Designed & Handcrafted by Zan from ninetofive.me
 
 --------------------------------------------------------------------- */
 
+/*bbd3c5*/
 
 /* 1 - Import Google Font
 ---------------------------------------------------------------------- */
@@ -36,6 +37,10 @@ Designed & Handcrafted by Zan from ninetofive.me
 
 .naive {
 	font-family: "NaiveInline"
+}
+
+.melany {
+	font-family: "Melany"
 }
 
 /******************************************************************
@@ -83,7 +88,7 @@ Designed & Handcrafted by Zan from ninetofive.me
 a.logo {
 	float: left;
 	display: block;
-	width: 140px;
+	width: 50px;
 	height: 30px;
 	background-image: url(../../images/logo3.png);
 	margin: 27px 0px 0px 40px;
@@ -110,11 +115,11 @@ ul.mainmenu li a {
 	transition: color 400ms ease;
 }
 ul.mainmenu li:hover a {
-	color: #6093e7;
+	color: #84a391;
 }
 ul.mainmenu li.active a {
 	font-weight: bold;
-	color: #6093e7;
+	color: #84a391;
 }
 
 /******************************************************************
@@ -127,7 +132,7 @@ a {
 	color: #616161;
 }
 a:hover {
-	color: #6093e7;
+	color: #84a391;
 }
 b {
 	font-weight: bold;
@@ -203,7 +208,7 @@ h6 {
 	color: #FFF;
 }
 .color {
-	color: #6093e7;
+	color: #84a391;
 }
 .dark-gray {
 	color: #4b4b4b;
@@ -219,18 +224,18 @@ h6 {
 div.section.divider {
 	width: 100%;
 	height: 40px;
-	border-top: 1px solid #6093e7;
+	border-top: 1px solid #84a391;
 	text-align: center;
 	margin-top: 100px;
 	margin-bottom: 40px;
 }
 div.section.divider.single {
-	border-top: 1px solid #6093e7;
+	border-top: 1px solid #84a391;
 	margin-top: 150px;
 }
 div.section.divider h2 {
 	font-weight: 400;
-	color: #6093e7;
+	color: #84a391;
 	background-color: #FFF;
 	margin-top: -20px;
 	width: 300px;
@@ -254,7 +259,7 @@ body{
 }
 
 a{
-	color: #3498db;
+	color: #84a391;
 }
 a:focus{
 	outline:none;
@@ -491,7 +496,7 @@ a:focus{
 	font-size:18px;
 	line-height:40px;
 	display:inline-block;
-	background-color:#3498db;
+	background-color:#84a391;
 	text-transform:uppercase;
 	padding:0px 25px;
 }
@@ -601,7 +606,7 @@ a.socialicon {
 	border-top:0px solid transparent;
 }
 #contact-form  .btn:hover{
-	color:#3498db;
+	color:#84a391;
 }
 #contact-form  .col-sm-6,
 #contact-form  .col-sm-10{
@@ -670,7 +675,7 @@ a.socialicon {
 	color: #1a1a1a;
 }
 #footer-section p a{
-	color: #3498db;
+	color: #84a391;
 }
 /* 8 - Footer Section End 
 ---------------------------------------------------------------------- */

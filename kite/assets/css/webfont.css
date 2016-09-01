@@ -23,6 +23,11 @@
   src:url("../fonts/NaiveInlineW00Bold.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "Melany";
+  src:url("../fonts/MelanyLaneW01Bold.ttf") format("truetype");
+}
+
 [data-icon]:before {
   font-family: "dripicons";
   content: attr(data-icon);
