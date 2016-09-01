@@ -34,6 +34,10 @@ Designed & Handcrafted by Zan from ninetofive.me
 	font-family: "nhand"
 }
 
+.naive {
+	font-family: "NaiveInline"
+}
+
 /******************************************************************
 	Sidebar
 ******************************************************************/
@@ -393,7 +397,7 @@ a:focus{
 .site-title{
 	text-align:center;
 	font-size:66px;
-	font-family:'Pacifico';
+	font-family:'NaiveInline';
 	margin:0 0 50px 0;
 	padding-bottom:50px;
 	position:relative;

@@ -18,6 +18,11 @@
   src:url("../fonts/NikolaidisHand.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "NaiveInline";
+  src:url("../fonts/NaiveInlineW00Bold.ttf") format("truetype");
+}
+
 [data-icon]:before {
   font-family: "dripicons";
   content: attr(data-icon);
