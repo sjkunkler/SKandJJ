@@ -15,7 +15,13 @@
 	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
 	<link href="assets/css/webfont.css" rel="stylesheet" type="text/css" />
 
+	<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+	<script type="text/javascript">
+	(function(){
+		emailjs.init("user_pHI873Y18KcMhNtWOC2Te");
+	})();
 
+	</script>
 	<!-- icon fonts font Awesome -->
 	<link href="assets/css/font-awesome.min.css" rel="stylesheet">
 
@@ -298,7 +304,7 @@
 		<div class="height-resize">
 			<div class="container">
 
-				<form id="contact-form" action="email.php" method="post" class="clearfix">
+				<form id="contact-form"  class="clearfix">
 					<div class="contact-box-hide">
 						<div class="col-sm-6">
 							<input type="text" class="form-control" id="first_name" name="first_name" required placeholder="First Name">

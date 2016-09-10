@@ -176,30 +176,38 @@ $(document).ready(function() {
 
 
       // Disable submit button just after the form processed 1st time successfully.
-      $('#contact-submit').attr({'disabled' : 'true', 'value' : 'Sending' });
+      //$('#contact-submit').attr({'disabled' : 'true', 'value' : 'Sending' });
 
       /* Post Ajax function of jQuery to get all the data from the submission of the form as soon as the form sends the values to email.php*/
-      $.post("php/contact.php", $("#contact-form").serialize(),function(result){
-        //Check the result set from email.php file.
-        if(result == 'sent'){
+      // $.post("php/contact.php", $("#contact-form").serialize(),function(result){
+      //   //Check the result set from email.php file.
+      //   if(result == 'sent'){
 
 
 
-          //If the email is sent successfully, remove the submit button
-          $('#first_name').remove();
-          $('#last_name').remove(); 
-          $('#contact_email').remove();
-          $('#subject').remove(); 
-          $('#message').remove();
-          $('#contact-submit').remove(); 
+      //     //If the email is sent successfully, remove the submit button
+      //     $('#first_name').remove();
+      //     $('#last_name').remove(); 
+      //     $('#contact_email').remove();
+      //     $('#subject').remove(); 
+      //     $('#message').remove();
+      //     $('#contact-submit').remove(); 
 
-          $('.contact-box-hide').slideUp();
-          $('.contact-message').html('<i class="fa fa-check contact-success"></i><div>Your message has been sent.</div>').fadeIn();
-        } else {
-          $('.btn-contact-container').hide();
-          $('.contact-message').html('<i class="fa fa-exclamation contact-error"></i><div>Something went wrong, please try again later.</div>').fadeIn();
+      //     $('.contact-box-hide').slideUp();
+      //     $('.contact-message').html('<i class="fa fa-check contact-success"></i><div>Your message has been sent.</div>').fadeIn();
+      //   } else {
+      //     $('.btn-contact-container').hide();
+      //     $('.contact-message').html('<i class="fa fa-exclamation contact-error"></i><div>Something went wrong, please try again later.</div>').fadeIn();
             
-        }
+      //   }
+      // });
+
+      // parameters: service_id, template_id, template_parameters
+      emailjs.send("default_service","template_jgINAfrP",{from_name: $('#first_name').val(), message: $('#message').val(), from_email: $('#contact_email').val(), reply_to:$('#contact_email').val()})
+      .then(function(response) {
+        console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
+      }, function(err) {
+        console.log("FAILED. error=", err);
       });
     }
   });  
