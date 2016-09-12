@@ -43,29 +43,10 @@ Designed & Handcrafted by Zan from ninetofive.me
 	font-family: "Melany"
 }
 
-/******************************************************************
-	Sidebar
-******************************************************************/
-.widget {
-	width: 260px;
-	margin: 50px 30px;
-	margin-bottom: 0px;
-	float: left;
+.rsvp-heading {
+	text-align: center;
 }
-.widget a {
-	font-size: 12px;
-}
-.widget li {
-	margin-top: 4px;
-}
-.widget.twitter a.tweet {
-	float: left;
-	margin-top: 20px;
-	min-height: 30px;
-	background-image: url(../img/twitterwidgeticon.png);
-	background-repeat: no-repeat;
-	padding-left: 35px;
-}
+
 
 /******************************************************************
 	Menu
@@ -128,7 +109,6 @@ ul.mainmenu li.active a {
 a {
 	font-family: "Open Sans", Verdana, Arial, sans-serif;
 	text-decoration: none;
-	font-size: 8pt;
 	color: #616161;
 }
 a:hover {
@@ -530,14 +510,6 @@ div.person div.image img {
 
 /* 7 - Contact Section
 ---------------------------------------------------------------------- */
-#contact .next-section a{
-
-	-webkit-transform:rotate(180deg);
-	   -moz-transform:rotate(180deg);
-	    -ms-transform:rotate(180deg);
-	     -o-transform:rotate(180deg);
-	        transform:rotate(180deg);
-}
 #contact-form .col-sm-6, 
 #contact-form .col-sm-10,
 #contact-form .col-sm-2{
@@ -550,6 +522,9 @@ div.person div.image img {
 #contact-form  input{
 	height:60px;
 }
+#contact-form  select{
+	height:60px;
+}
 #contact-form #first_name{
 	border-right:0px solid transparent;
 	border-bottom:0px solid transparent;
@@ -557,7 +532,7 @@ div.person div.image img {
 #contact-form #last_name{
 	border-bottom:0px solid transparent;
 }
-#contact-form  #email{
+#contact-form  #contact_email{
 	border-right:0px solid transparent;
 }
 #contact-form textarea.form-control{
@@ -582,11 +557,11 @@ div.person div.image img {
 .first-name-error,
 .last-name-error,
 .contact-email-error,
-.contact-subject-error,
+.contact-rsvp-error,
 .contact-message-error{
 	color: #4b4b4b;
 	position: absolute;
-	background: rgba(52, 152, 219,1);
+	background: #84a391;
 	display: none;
 	left: 25px;
 	top: -30px;
@@ -597,7 +572,7 @@ div.person div.image img {
 .first-name-error:after,
 .last-name-error:after,
 .contact-email-error:after,
-.contact-subject-error:after,
+.contact-rsvp-error:after,
 .contact-message-error:after{
 	position: absolute;
 	content: "";
@@ -605,17 +580,9 @@ div.person div.image img {
 	height: 0;
 	border-style: solid;
 	border-width: 12px;
-	border-color: rgba(52, 152, 219,1) transparent  transparent transparent;
+	border-color: #84a391 transparent  transparent transparent;
 	left: 25px;
 	bottom: -24px;
-}
-#contact-loading{
-	display: none;
-	cursor: inherit;
-	line-height: 110px;
-}
-#contact-loading:hover{
-	color: inherit;
 }
 .contact-message{
 	text-align: center;
@@ -775,7 +742,7 @@ div.person div.image img {
 	        transform: rotate(45deg);
 }
 #loader .dot:nth-child(7n+1):before {
-	background: #9500ff;
+	background: darkorchid;
 	-webkit-animation: load 0.8s linear 0.1s infinite;
 	   -moz-animation: load 0.8s linear 0.1s infinite;
 	    -ms-animation: load 0.8s linear 0.1s infinite;
@@ -820,7 +787,7 @@ background: #9500ff;
 	        transform: rotate(180deg);
 }
 #loader .dot:nth-child(7n+4):before {
-	background: #0040ff;
+	background: #84a391;
 	-webkit-animation: load 0.8s linear 0.4s infinite;
 	   -moz-animation: load 0.8s linear 0.4s infinite;
 	    -ms-animation: load 0.8s linear 0.4s infinite;
@@ -835,7 +802,7 @@ background: #9500ff;
 	        transform: rotate(225deg);
 }
 #loader .dot:nth-child(7n+5):before {
-	background: #2a00ff;
+	background: #ababab;
 	-webkit-animation: load 0.8s linear 0.5s infinite;
 	   -moz-animation: load 0.8s linear 0.5s infinite;
 	    -ms-animation: load 0.8s linear 0.5s infinite;
@@ -850,7 +817,7 @@ background: #9500ff;
 	        transform: rotate(270deg);
 }
 #loader .dot:nth-child(7n+6):before {
-	background: #9500ff;
+	background: darkorchid;
 	-webkit-animation: load 0.8s linear 0.6s infinite;
 	   -moz-animation: load 0.8s linear 0.6s infinite;
 	    -ms-animation: load 0.8s linear 0.6s infinite;
@@ -865,7 +832,7 @@ background: #9500ff;
 	        transform: rotate(315deg);
 }
 #loader .dot:nth-child(7n+7):before {
-	background: magenta;
+	background: darkseagreen;
 	-webkit-animation: load 0.8s linear 0.7s infinite;
 	   -moz-animation: load 0.8s linear 0.7s infinite;
 	    -ms-animation: load 0.8s linear 0.7s infinite;
@@ -880,7 +847,7 @@ background: #9500ff;
 	        transform: rotate(360deg);
 }
 #loader .dot:nth-child(7n+8):before {
-	background: #ff0095;
+	background: #bbd3c5;
 	-webkit-animation: load 0.8s linear 0.8s infinite;
 	   -moz-animation: load 0.8s linear 0.8s infinite;
 	    -ms-animation: load 0.8s linear 0.8s infinite;

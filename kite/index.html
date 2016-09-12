@@ -303,7 +303,7 @@
 	<section id="contact" class="section-style">
 		<div class="height-resize">
 			<div class="container">
-
+				<h3 class="rsvp-heading">Please RSVP for each person listed on the invitation. Thank you!</h3>
 				<form id="contact-form"  class="clearfix">
 					<div class="contact-box-hide">
 						<div class="col-sm-6">
@@ -319,16 +319,20 @@
 							<span class="contact-email-error"></span>
 						</div>
 						<div class="col-sm-6">
-							<input type="text" class="form-control" id="subject" name="contact_subject" required placeholder="Subject">
-							<span class="contact-subject-error"></span>
+							<select name="contact_rsvp" required class="form-control" id="contact_rsvp" >
+								<option value="0" disabled selected hidden>RSVP...</option>
+								<option value="1">Accept</option>
+								<option value="2">Decline</option>
+							</select>
+							<span class="contact-rsvp-error"></span>
 						</div>
 						<div class="col-sm-10">
-							<textarea class="form-control" rows="5" id="message" name="message" required placeholder="Message"></textarea>
+							<textarea class="form-control" rows="5" id="message" name="message" placeholder="Optional Message"></textarea>
 							<span class="contact-message-error"></span>
 						</div>
 						<div class="col-sm-2">
 							<button id="contact-submit" class="btn custom-btn col-xs-12" type="submit" name="submit"><i class="fa fa-envelope"></i></button>
-							<span id="contact-loading" class="btn custom-btn col-xs-12"> <i class="fa fa-envelope"></i> </span>
+							<!--<span id="contact-loading" class="btn custom-btn col-xs-12"> <i class="fa fa-envelope"></i> </span>-->
 						</div>
 					</div>
 					<!-- /.contact-box-hide -->

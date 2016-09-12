@@ -91,35 +91,6 @@ $(document).ready(function() {
 
 	    });
 
-
-
-
-  /* Subscribe
-  -------------------------------------------------------------------*/
-    $(".news-letter").ajaxChimp({
-        callback: mailchimpResponse,
-        url: "" // http://jeweltheme.us10.list-manage.com/subscribe/post?u=a3e1b6603a9caac983abe3892&amp;id=257cf1a459" // Replace your mailchimp post url inside double quote "".  
-    });
-
-    function mailchimpResponse(resp) {
-         if(resp.result === 'success') {
-         
-            $('.alert-success').html(resp.msg).fadeIn().delay(3000).fadeOut();
-            
-        } else if(resp.result === 'error') {
-            $('.alert-warning').html(resp.msg).fadeIn().delay(3000).fadeOut();
-        }  
-    };
-
-
-
-
-	/* Subscribe End
-	-------------------------------------------------------------------*/
-
-
-
-
 	/* Contact
 	-------------------------------------------------------------------*/
     // Email from Validation
@@ -129,49 +100,43 @@ $(document).ready(function() {
     e.preventDefault();
 
 
-    $('.first-name-error, .last-name-error, .contact-email-error, .contact-subject-error, .contact-message-error').hide();
+    $('.first-name-error, .last-name-error, .contact-email-error, .contact-rsvp-error').hide();
 
     // Variable declaration
     var error = false;
     var k_first_name = $('#first_name').val();
     var k_last_name = $('#last_name').val();
     var k_email = $('#contact_email').val(); 
-    var k_subject = $('#subject').val(); 
-    var k_message = $('#message').val();
+    var k_rsvp = $('#contact_rsvp').val(); 
 
     // Form field validation
     if(k_first_name.length == 0){
-      var error = true; 
+      error = true; 
       $('.first-name-error').html('<i class="fa fa-exclamation"></i> First name is required.').fadeIn();
     }  
 
     if(k_last_name.length == 0){
-      var error = true;
+      error = true;
       $('.last-name-error').html('<i class="fa fa-exclamation"></i> Last name is required.').fadeIn();
     }  
 
     if(k_email.length != 0 && validateEmail(k_email)){
        
     } else {
-      var error = true; 
+      error = true; 
       $('.contact-email-error').html('<i class="fa fa-exclamation"></i> Please enter a valid email address.').fadeIn();
     }
 
-    if(k_subject.length == 0){
-      var error = true;
-     $('.contact-subject-error').html('<i class="fa fa-exclamation"></i> Subject is required.').fadeIn();
+    if(k_rsvp == null){
+      error = true;
+     $('.contact-rsvp-error').html('<i class="fa fa-exclamation"></i> Please select an RSVP option.').fadeIn();
     } 
-
-    if(k_message.length == 0){
-      var error = true;
-      $('.contact-message-error').html('<i class="fa fa-exclamation"></i> Please provide a message.').fadeIn();
-    }  
 
     // If there is no validation error, next to process the mail function
     if(error == false){
 
-        $('#contact-submit').hide();
-        $('#contact-loading').fadeIn();
+        //$('#contact-submit').hide();
+        //$('#contact-loading').fadeIn();
         $('.contact-error-field').fadeOut();
 
 
@@ -203,11 +168,24 @@ $(document).ready(function() {
       // });
 
       // parameters: service_id, template_id, template_parameters
-      emailjs.send("default_service","template_jgINAfrP",{from_name: $('#first_name').val(), message: $('#message').val(), from_email: $('#contact_email').val(), reply_to:$('#contact_email').val()})
+      emailjs.send("default_service","template_jgINAfrP",{
+        from_name: $('#first_name').val() + " " + $('#last_name').val(), 
+        message: $('#message').val(), 
+        from_email: $('#contact_email').val(), 
+        reply_to:$('#contact_email').val(),
+        response: $('#contact_rsvp').find(":selected").text()
+      })
       .then(function(response) {
         console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
+        alert('Thank you for your RSVP!');
+        $('#first_name').val('');
+        $('#last_name').val('');
+        $('#contact_email').val('');
+        $('#contact_rsvp').val(0);
+        $('#message').val('');
       }, function(err) {
         console.log("FAILED. error=", err);
+      alert('Oops, something went wrong. Please try again later.');
       });
     }
   });  
