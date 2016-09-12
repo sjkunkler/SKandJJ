@@ -907,8 +907,8 @@ background: #9500ff;
 img.party {
   border-color: white /* for an acceptable IE result*/;
   border-width: 15px;
-  -moz-border-image: url(http://tobias-reinhardt.de/img/frame.png) 15 stretch;
-  border-image: url(http://tobias-reinhardt.de/img/frame.png) 15 stretch;
+  -moz-border-image: url(https://tobias-reinhardt.de/img/frame.png) 15 stretch;
+  border-image: url(https://tobias-reinhardt.de/img/frame.png) 15 stretch;
   border-style: solid;
   margin: auto;
 }
