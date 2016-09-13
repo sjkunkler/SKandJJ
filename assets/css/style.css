@@ -17,7 +17,7 @@ Description: Responsive HTML5 Template
 Author: ninetofive
 Author URI: http://www.ninetofive.me
 Version: 1.0
-							
+
 Designed & Handcrafted by Zan from ninetofive.me
 
 --------------------------------------------------------------------- */
@@ -28,19 +28,19 @@ Designed & Handcrafted by Zan from ninetofive.me
 ---------------------------------------------------------------------- */
 @import url(https://fonts.googleapis.com/css?family=Pacifico);
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,400italic,700);
-/* 1 - Import Google Font End 
+@import url(https://fonts.googleapis.com/css?family=Slabo+27px);
+/* 1 - Import Google Font End
 ---------------------------------------------------------------------- */
 
 .nhand {
-	font-family: "nhand"
+	font-family: "nhand";
 }
-
 .naive {
-	font-family: "NaiveInline"
+	font-family: "NaiveInline";
 }
 
 .melany {
-	font-family: "Melany"
+	font-family: "Melany";
 }
 
 .rsvp-heading {
@@ -75,7 +75,7 @@ a.logo {
 	margin: 27px 0px 0px 40px;
 }
 ul.mainmenu {
-	font-family: "Open Sans", Verdana, Arial, sans-serif;
+	font-family: 'Slabo 27px', serif;
 	float: right;
 	margin: 0px 40px 0px 0px;
 	text-transform: uppercase;
@@ -105,11 +105,9 @@ ul.mainmenu li.active a {
 
 /******************************************************************
 	General
-******************************************************************/								
+******************************************************************/
 a {
-	font-family: "Open Sans", Verdana, Arial, sans-serif;
 	text-decoration: none;
-	color: #616161;
 }
 a:hover {
 	color: #84a391;
@@ -118,48 +116,47 @@ b {
 	font-weight: bold;
 }
 p {
-	font-family: "Open Sans", Verdana, Arial, sans-serif;
 	line-height: 1.6em;
 	color: #848484;
 	font-size: 12px;
 }
 h1 {
-	font-family: "Open Sans", Verdana, Arial, sans-serif;
+	font-family: 'Slabo 27px', serif;
 	line-height: 1.6em;
 	color: #454544;
 	text-decoration: none;
 	font-size: 40px;
 }
 h2 {
-	font-family: "Open Sans", Verdana, Arial, sans-serif;
+	font-family: 'Slabo 27px', serif;
 	line-height: 1.6em;
 	color: #454544;
 	text-decoration: none;
 	font-size: 40px;
 }
 h3 {
-	font-family: "Open Sans", Verdana, Arial, sans-serif;
+	font-family: 'Slabo 27px', serif;
 	line-height: 1.6em;
 	color: #454544;
 	text-decoration: none;
 	font-size: 18px;
 }
 h4 {
-	font-family: "Open Sans", Verdana, Arial, sans-serif;
+	font-family: 'Slabo 27px', serif;
 	line-height: 1.6em;
 	color: #454544;
 	text-decoration: none;
 	font-size: 16px;
 }
 h5 {
-	font-family: "Open Sans", Verdana, Arial, sans-serif;
+	font-family: 'Slabo 27px', serif;
 	line-height: 1.6em;
 	color: #454544;
 	text-decoration: none;
 	font-size: 14px;
 }
 h6 {
-	font-family: "Open Sans", Verdana, Arial, sans-serif;
+	font-family: 'Slabo 27px', serif;
 	line-height: 1.6em;
 	color: #454544;
 	text-decoration: none;
@@ -233,7 +230,6 @@ a.scroll {
 ---------------------------------------------------------------------- */
 body{
 	font-family:'Roboto', sans-serif;
-	/*color:#fff;*/
 	-webkit-font-smoothing:antialiased;
 	-moz-osx-font-smoothing:grayscale;
 }
@@ -318,7 +314,7 @@ a:focus{
 	        transition:all .25s;
 }
 .btn:focus, .btn:active:focus, .btn.active:focus {
- 	outline: none; 
+ 	outline: none;
  	color: #4b4b4b;
 }
 .form-control,
@@ -340,18 +336,18 @@ a:focus{
    color: #4b4b4b;
 }
 
-.form-control:-moz-placeholder { 
-   color: #4b4b4b;  
+.form-control:-moz-placeholder {
+   color: #4b4b4b;
 }
 
-.form-control::-moz-placeholder { 
-   color: #4b4b4b;  
+.form-control::-moz-placeholder {
+   color: #4b4b4b;
 }
 
 .form-control:-ms-input-placeholder{
 	color:#4b4b4b;
 }
-/* 2.3 - Placeholder color End 
+/* 2.3 - Placeholder color End
 ------------------------------------------ */
 
 
@@ -367,17 +363,17 @@ a:focus{
 .height-resize .team-container .col-sm-4{
 	padding-top:20px !important;
 }
-/* 2.4 - Height Resize End 
+/* 2.4 - Height Resize End
 ------------------------------------------ */
 
 
-/* 2 - Global Style End 
+/* 2 - Global Style End
 ---------------------------------------------------------------------- */
 
 
 
 
-/* 4 - Page Top Section 
+/* 4 - Page Top Section
 ---------------------------------------------------------------------- */
 .site-title{
 	text-align:center;
@@ -423,7 +419,7 @@ a:focus{
 	    -ms-border-radius:15px;
 	     -o-border-radius:15px;
 	        border-radius:15px;
-	
+
 	-webkit-transform:rotate(45deg);
 	   -moz-transform:rotate(45deg);
 	    -ms-transform:rotate(45deg);
@@ -448,8 +444,8 @@ a:focus{
 	display:inline-block;
 	font-weight:300;
 	padding-top: 15%;
-	
-	
+
+
 	-webkit-transition:all .25s;
 	   -moz-transition:all .25s;
 	    -ms-transition:all .25s;
@@ -458,7 +454,7 @@ a:focus{
 }
 .time-number .digit{
 	line-height: 60px;
-	display: inline-block;	
+	display: inline-block;
 	overflow: hidden;
 }
 
@@ -480,7 +476,7 @@ a:focus{
 	text-transform:uppercase;
 	padding:0px 25px;
 }
-/* 4 - Page Top Section End 
+/* 4 - Page Top Section End
 ---------------------------------------------------------------------- */
 
 
@@ -510,7 +506,7 @@ div.person div.image img {
 
 /* 7 - Contact Section
 ---------------------------------------------------------------------- */
-#contact-form .col-sm-6, 
+#contact-form .col-sm-6,
 #contact-form .col-sm-10,
 #contact-form .col-sm-2{
 	padding:0;
@@ -589,13 +585,13 @@ div.person div.image img {
 	font-size: 1.125em;
 }
 
-/* 7 - Contact Section End 
+/* 7 - Contact Section End
 ---------------------------------------------------------------------- */
 
 
 
 
-/* 8 - Footer Section  
+/* 8 - Footer Section
 ---------------------------------------------------------------------- */
 #footer-section{
 	width: 100%;
@@ -603,7 +599,7 @@ div.person div.image img {
 }
 #footer-section p{
 	margin: 0;
-	padding: 25px 15px; 
+	padding: 25px 15px;
 	text-align: center;
 	line-height: 30px;
 	color: #1a1a1a;
@@ -611,14 +607,14 @@ div.person div.image img {
 #footer-section p a{
 	color: #84a391;
 }
-/* 8 - Footer Section End 
+/* 8 - Footer Section End
 ---------------------------------------------------------------------- */
 
 
 
 
 
-/* 9 - Media Query 
+/* 9 - Media Query
 ---------------------------------------------------------------------- */
 
 /* 9.1 - media screen and (max-width: 992px)
@@ -912,3 +908,82 @@ img.party {
   border-style: solid;
   margin: auto;
 }
+
+/* Counter*/
+.main {
+        /*position: absolute;*/
+        width: 100%;
+        height: 100%;
+        top: 50%;
+        /*left: 50%;*/
+        margin: 0 auto;
+		padding-top: 100px;
+        /*transform: translate(-55%, -15%);*/
+		font-family: 'Slabo 27px', serif;
+}
+        #content {
+            width: 100%;
+            max-width: 800px;
+            padding: (0, 500, 0, 0);
+            min-height: 24px;
+            height: 100%;
+            position: relative;
+            text-align: center;
+            top: 33%;
+		}
+
+            #content p {
+                color: white;
+                font-size: 12px;
+                margin: 0 auto;
+                padding: 0;
+                letter-spacing: .5rem;
+                text-transform: uppercase;
+				font-family: 'Slabo 27px', serif;
+			}
+             #content p:last-child {
+                    /*font-size: 0.75rem;*/
+                    font-weight: 100;
+                    margin: 3em auto;
+                    padding: 0;
+                    letter-spacing: .1rem;
+					font-family: 'Slabo 27px', serif;
+                }
+            
+            #content div {
+                color: #fff;
+                margin: 0 auto;
+                line-height: 100px;
+                /*font-size: 1rem;*/
+                font-weight: 700;
+			}
+             .main ul {
+                    list-style-type: none;
+                    margin-bottom: 0;
+                    margin-left: 0;
+			 }
+              .main li {
+                        display: inline-block;
+                        margin-right: 2rem;
+                        width: 6rem;
+                    }
+                
+                .timenumbers {
+                    display: block;
+                    /*font-size: 1.3rem;*/
+					font-size: 45px;
+                    font-weight: 200;
+                    line-height: 1.5rem;
+                    margin: 0 auto;
+                    text-align: center;
+                }
+                p.timedescription {
+                    /*font-size: 1.5rem;*/
+                    /*font-variant: small-caps;*/
+                    line-height: 1.5rem;
+                    margin: 0 auto;
+                    text-align: center;
+                    position: relative;
+                    top: 0px;
+                }
+        
