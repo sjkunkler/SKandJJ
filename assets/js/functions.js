@@ -56,7 +56,7 @@ $(document).ready(function() {
 		};
 	});
 	$(window).scroll(function(){
-		if ($('body').scrollTop() > 0 && scroll == 'true') {
+		if (($('html').scrollTop() > 0 || $('body').scrollTop() > 0) && scroll == 'true') {
 			if (nav.data('size') == 'big') {
 				nav.data('size','small').stop().animate({
 					marginTop:'0px'
