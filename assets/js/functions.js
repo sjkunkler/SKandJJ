@@ -116,38 +116,7 @@ $(document).ready(function() {
 
     // If there is no validation error, next to process the mail function
     if(error == false){
-
-        //$('#contact-submit').hide();
-        //$('#contact-loading').fadeIn();
         $('.contact-error-field').fadeOut();
-
-
-      // Disable submit button just after the form processed 1st time successfully.
-      //$('#contact-submit').attr({'disabled' : 'true', 'value' : 'Sending' });
-
-      /* Post Ajax function of jQuery to get all the data from the submission of the form as soon as the form sends the values to email.php*/
-      // $.post("php/contact.php", $("#contact-form").serialize(),function(result){
-      //   //Check the result set from email.php file.
-      //   if(result == 'sent'){
-
-
-
-      //     //If the email is sent successfully, remove the submit button
-      //     $('#first_name').remove();
-      //     $('#last_name').remove(); 
-      //     $('#contact_email').remove();
-      //     $('#subject').remove(); 
-      //     $('#message').remove();
-      //     $('#contact-submit').remove(); 
-
-      //     $('.contact-box-hide').slideUp();
-      //     $('.contact-message').html('<i class="fa fa-check contact-success"></i><div>Your message has been sent.</div>').fadeIn();
-      //   } else {
-      //     $('.btn-contact-container').hide();
-      //     $('.contact-message').html('<i class="fa fa-exclamation contact-error"></i><div>Something went wrong, please try again later.</div>').fadeIn();
-            
-      //   }
-      // });
 
       // parameters: service_id, template_id, template_parameters
       emailjs.send("default_service","template_jgINAfrP",{
