@@ -70,6 +70,7 @@ $(document).ready(function() {
 			}
 			
 		}
+
 	});
 
 
@@ -155,13 +156,17 @@ $(document).ready(function() {
 	/* Contact End
 	-------------------------------------------------------------------*/
 
+  $('#carousellatest').jcarousel();
 
-    
-
-    
-
-
-
+  // Carousel Hover
+  $('div.section.block').hover(
+    function () {
+      $(this).children('div.content').fadeIn('slow');
+    },
+    function () {
+      $(this).children('div.content').fadeOut('slow');
+    }
+  );
 });
 
 /* Document Ready function End
@@ -286,4 +291,5 @@ function addSticky() {
 
 $(window).scroll(function () {
   addSticky();
+  
 });  
