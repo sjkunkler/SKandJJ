@@ -231,10 +231,10 @@ a.scroll {
 	Home Page
 ******************************************************************/
 div.section.full {
-	margin: 40px 0px;
+	/*margin: 40px 0px;*/
 	clear: both;
-	width: 725px;
-	overflow: hidden;
+	width: 830px;
+	/*overflow: hidden;*/
 }
 div.section.full li {
 	width: 220px;
@@ -305,11 +305,11 @@ div.section.full li:last-child  {
 .jcarousel-next, .jcarousel-next-disabled {
 	background-position: -20px 0px;
 	top: -25px;
-	right: 0px;
+	right: 15px;
 }
 .jcarousel-prev, .jcarousel-prev-disabled {
 	top: -25px;
-	right: 22px;
+	right: 37px;
 }
 /* 2 - Global Style
 ---------------------------------------------------------------------- */
@@ -335,7 +335,7 @@ a:focus{
 	background-size:cover;
 }
 .pattern{
-	background:rgba(0,0,0,.5);
+	background:rgba(0,0,0,.25);
 	/*background:rgba(0,0,0,.5) url(../images/pattern.png);*/
 	padding-top:100px;
 }
