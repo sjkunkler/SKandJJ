@@ -335,7 +335,7 @@ a:focus{
 	background-size:cover;
 }
 .pattern{
-	background:rgba(0,0,0,.25);
+	background:rgba(0,0,0,.15);
 	/*background:rgba(0,0,0,.5) url(../images/pattern.png);*/
 	padding-top:100px;
 }
@@ -440,7 +440,7 @@ a:focus{
 ------------------------------------------ */
 
 .pattern.height-resize{
-	padding-top: 40px;
+	/*padding-top: 40px;*/
 }
 .height-resize .time-count-container{
 	margin-top: 20px !important;
