@@ -524,22 +524,20 @@ div.person div.image img {
 	height:60px;
 }
 #contact-form #first_name{
-	/*border-right:0px solid transparent;*/
+	border-right:0px solid transparent;
 	border-bottom:0px solid transparent;
 }
 #contact-form #last_name{
 	border-bottom:0px solid transparent;
 }
 #contact-form  #contact_email{
-	/*border-right:0px solid transparent;*/
-	border-bottom:0px solid transparent;
+	border-right:0px solid transparent;
+	/*border-bottom:0px solid transparent;*/
 }
-#contact-form #contact_rsvp{
-	border-bottom:0px solid transparent;
-}
+
 #contact-form textarea.form-control{
 	height:130px;
-	/*border-top:0px solid transparent;*/
+	border-top:0px solid transparent;
 	padding-top: 20px;
 }
 #contact-form  .btn{
@@ -547,7 +545,7 @@ div.person div.image img {
 	height:130px;
 	border:1px solid #4b4b4b;
 	border-left:0px solid transparent;
-	/*border-top:0px solid transparent;*/
+	border-top:0px solid transparent;
 }
 #contact-form  .btn:hover{
 	color:#84a391;
@@ -661,11 +659,14 @@ div.person div.image img {
 	#contact-form #subject{
 		border-top:0px solid transparent;
 	}
-	#contact-form  #email{
+	#contact-form  #contact_email{
 		border-right:1px solid #4b4b4b;
 	}
-		#contact-form  .btn{
-	border-left:1px solid #4b4b4b;
+	#contact-form #contact_rsvp{
+		border-top:0px solid transparent;
+	}
+	#contact-form  .btn{
+		border-left:1px solid #4b4b4b;
 	}
 }
 
