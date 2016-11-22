@@ -227,90 +227,7 @@ a.scroll {
 	display: block;
 }
 
-/******************************************************************
-	Home Page
-******************************************************************/
-div.section.full {
-	/*margin: 40px 0px;*/
-	clear: both;
-	width: 830px;
-	/*overflow: hidden;*/
-}
-div.section.full li {
-	width: 220px;
-	margin-top: 20px;
-	margin-right: 26px;
-}
-div.section.block {
-	width: 220px;
-	height: 185px;
-	background-color: #f6f6f6;
-	text-align: center;
-	float: left;
-	cursor: pointer;
-}
-div.section.block h5 {
-	margin-top: 15px;
-}
-div.section.block h6 {
-	color: #838282;
-}
-div.section.block img {
-	width: 220px;
-	height: 185px;
-	display: block;
-	position: absolute;
-	margin-top: 0px;
-	margin-left: 0px;
-	z-index: 1;
-}
-div.section.block .content {
-	width: 220px;
-	height: 50px;
-	position: absolute;
-	z-index: 5;
-	background-color: #f6f6f6;
-	margin-top: 140px;
-	display: none;
-	opacity: .7;
-}
 
-div.section.full li:last-child  {
-	margin-right: 0px;
-}
-
-
-
-/******************************************************************
-	jCarousel
-******************************************************************/
-.jcarousel-prev, .jcarousel-next {
-	width: 20px;
-	height: 20px;
-	background-image: url(../images/carouselcontrols.png);
-	background-repeat: no-repeat;
-	background-color: #84a391;
-	cursor: pointer;
-	position: absolute;
-}
-.jcarousel-prev-disabled, .jcarousel-next-disabled {
-	width: 20px;
-	height: 20px;
-	background-image: url(../images/carouselcontrols.png);
-	background-repeat: no-repeat;
-	background-color: #cfcfcf;
-	cursor: pointer;
-	position: absolute;
-}
-.jcarousel-next, .jcarousel-next-disabled {
-	background-position: -20px 0px;
-	top: -25px;
-	right: 15px;
-}
-.jcarousel-prev, .jcarousel-prev-disabled {
-	top: -25px;
-	right: 37px;
-}
 /* 2 - Global Style
 ---------------------------------------------------------------------- */
 body{
@@ -607,18 +524,22 @@ div.person div.image img {
 	height:60px;
 }
 #contact-form #first_name{
-	border-right:0px solid transparent;
+	/*border-right:0px solid transparent;*/
 	border-bottom:0px solid transparent;
 }
 #contact-form #last_name{
 	border-bottom:0px solid transparent;
 }
 #contact-form  #contact_email{
-	border-right:0px solid transparent;
+	/*border-right:0px solid transparent;*/
+	border-bottom:0px solid transparent;
+}
+#contact-form #contact_rsvp{
+	border-bottom:0px solid transparent;
 }
 #contact-form textarea.form-control{
 	height:130px;
-	border-top:0px solid transparent;
+	/*border-top:0px solid transparent;*/
 	padding-top: 20px;
 }
 #contact-form  .btn{
@@ -626,7 +547,7 @@ div.person div.image img {
 	height:130px;
 	border:1px solid #4b4b4b;
 	border-left:0px solid transparent;
-	border-top:0px solid transparent;
+	/*border-top:0px solid transparent;*/
 }
 #contact-form  .btn:hover{
 	color:#84a391;
