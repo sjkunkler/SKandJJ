@@ -2,16 +2,7 @@
 /* Background Images
 -------------------------------------------------------------------*/
 var  pageTopImage = jQuery('#home').data('background-image');
-var  weddingImage = jQuery('#wedding').data('background-image');
-var  aboutImage = jQuery('#about').data('background-image');
-var  subscribeImage = jQuery('#subscribe').data('background-image');
-var  contactImage = jQuery('#contact').data('background-image');
-
-if (pageTopImage) {  jQuery('#home').css({ 'background-image':'url(' + pageTopImage + ')' }); };
-if (weddingImage) {  jQuery('#wedding').css({ 'background-image':'url(' + weddingImage + ')' }); };
-if (aboutImage) {  jQuery('#about').css({ 'background-image':'url(' + aboutImage + ')' }); };
-if (subscribeImage) {  jQuery('#subscribe').css({ 'background-image':'url(' + subscribeImage + ')' }); };
-if (contactImage) {  jQuery('#contact').css({ 'background-image':'url(' + contactImage + ')' }); };
+if (pageTopImage) {  jQuery('#home').css({ 'background-image':'url(' + pageTopImage + ')'}); };
 
 /* Background Images End
 -------------------------------------------------------------------*/

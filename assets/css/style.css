@@ -331,6 +331,7 @@ a:focus{
 	        box-shadow:none;
 }
 
+img { max-width: 100%; }
 
 /* 2.3 - Placeholder color
 ------------------------------------------ */
@@ -377,6 +378,13 @@ a:focus{
 
 /* 4 - Page Top Section
 ---------------------------------------------------------------------- */
+#home {
+  background: url(images/background/page-top7.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 .site-title{
 	text-align:center;
 	font-size:66px;
@@ -621,8 +629,6 @@ div.person div.image img {
 /* 9 - Media Query
 ---------------------------------------------------------------------- */
 
-/* 9.1 - media screen and (max-width: 992px)
------------------------------------------------- */
 @media screen and (max-width: 992px){
 	.container{
 		width:100%;
@@ -636,20 +642,11 @@ div.person div.image img {
 	}
 }
 
-
-
-/* 9.1 - media screen and (max-width: 992px)  End
------------------------------------------------- */
-
-
-
-
-/* 9.2 - media screen and (max-width: 768px)
------------------------------------------------- */
-
-
-
 @media screen and (max-width: 768px){
+		.container{
+		width:100%;
+		/*max-width:830px;*/
+	}
 	.section-title{
 		font-size:40px;
 	}
@@ -670,20 +667,12 @@ div.person div.image img {
 	}
 }
 
-/* 9.2 - media screen and (max-width: 768px) End
------------------------------------------------- */
 
-
-/* 9.3 - media screen and (max-width: 1170px)
------------------------------------------------- */
 @media (min-width: 1170px){
 	.container{
 		width:830px;
 	}
 }
-/* 9.3 - media screen and (max-width: 1170px) End
------------------------------------------------- */
-
 
 /* 9 - Media Query End
 ---------------------------------------------------------------------- */
