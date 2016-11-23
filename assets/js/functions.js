@@ -61,8 +61,41 @@ $(document).ready(function() {
 			}
 			
 		}
-
 	});
+
+  $(function() {
+  var pull    = $('#pull'),
+    menu    = $('ul.mainmenu'),
+    menuHeight  = menu.height();
+ 
+  $(pull).on('click', function(e) {
+    e.preventDefault();
+    menu.slideToggle();
+  });
+
+  var menuItems = $("ul.mainmenu a")
+  $(menuItems).on('click', function(e) {
+    var w = $(window).width();
+    if(w < 768){
+      e.preventDefault();
+      menu.slideToggle();
+    }
+    });
+
+  $(window).resize(function(){
+    if(pull.is(':hidden')) {
+      menu.show();
+    }else {
+      menu.hide();
+    }
+  });
+
+    if(pull.is(':hidden')) {
+      menu.show();
+    }else {
+      menu.hide();
+    }
+});
 
 
 	/* Contact

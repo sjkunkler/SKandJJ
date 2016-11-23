@@ -102,6 +102,39 @@ ul.mainmenu li.active a {
 	font-weight: bold;
 	color: #84a391;
 }
+.navbutton {
+    display: none;
+	width: 50px;
+	height: 30px;
+	/*display: inline-block;*/
+	position: absolute;
+	right: 15px;
+	top: 25px;
+	color:#84a391;
+	background-color:transparent;
+
+	-webkit-border-radius:0;
+	   -moz-border-radius:0;
+	    -ms-border-radius:0;
+	     -o-border-radius:0;
+	        border-radius:0;
+
+	-webkit-transition:all .25s;
+	   -moz-transition:all .25s;
+	    -ms-transition:all .25s;
+	     -o-transition:all .25s;
+	        transition:all .25s;
+	font-size:25px;
+	border:0px solid transparent;
+	border-top:0px solid transparent;
+}
+.navbutton:hover{
+	color:#84a391;
+}
+.navbutton:focus{
+	outline:none;
+	box-shadow:none
+}
 
 /******************************************************************
 	General
@@ -178,6 +211,17 @@ h6 {
 	clear: both;
 }
 
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
+}
+.clearfix:after {
+	clear: both;
+}
+.clearfix {
+	*zoom: 1;
+}
 /******************************************************************
 	Colors
 ******************************************************************/
@@ -540,7 +584,6 @@ div.person div.image img {
 }
 #contact-form  #contact_email{
 	border-right:0px solid transparent;
-	/*border-bottom:0px solid transparent;*/
 }
 
 #contact-form textarea.form-control{
@@ -622,10 +665,6 @@ div.person div.image img {
 /* 8 - Footer Section End
 ---------------------------------------------------------------------- */
 
-
-
-
-
 /* 9 - Media Query
 ---------------------------------------------------------------------- */
 
@@ -643,7 +682,7 @@ div.person div.image img {
 }
 
 @media screen and (max-width: 768px){
-		.container{
+	.container{
 		width:100%;
 		/*max-width:830px;*/
 	}
@@ -665,14 +704,47 @@ div.person div.image img {
 	#contact-form  .btn{
 		border-left:1px solid #4b4b4b;
 	}
+
+	div a.logo {
+		margin-bottom: 20px;	
+	}
+	.menubar {
+		position: fixed;
+		top: 0px;
+		height: auto;
+		width: 100%;
+		z-index: 9999;
+	}
+
+	ul.mainmenu {
+		border-bottom: 0;
+		width: 100%;
+		display: block;
+		height: auto;
+	}
+	ul.mainmenu li {
+		width: 25%;
+		float: left;
+		position: relative;
+		/*display: none;*/
+	}
+	button.navbutton {
+		display: block;
+	}
+
 }
 
+@media  screen and (max-width: 480px)  {
+	.item  {
+		width:50% !important;
+	}
+}
 
-@media (min-width: 1170px){
+/*@media (min-width: 1170px){
 	.container{
 		width:830px;
 	}
-}
+}*/
 
 /* 9 - Media Query End
 ---------------------------------------------------------------------- */
