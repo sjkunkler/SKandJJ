@@ -538,22 +538,24 @@ img { max-width: 100%; }
 	About Us
 ******************************************************************/
 div.person {
-	width: 920px;
+	max-width: 830px;
 	margin: 20px auto;
 }
 div.person div.image {
-	width: 340px;
+	width: 330px;
 	height: 250px;
 	float: right;
-	margin-bottom: 40px;
+	/*margin-bottom: 40px;*/
+	margin: 20px auto;
 }
 div.person div.info {
-	width: 520px;
-	float: right;
+	width: 390px;
+	float: left;
 	padding: 0px 30px;
 }
 div.person div.image img {
 	position: absolute;
+	/*position: static;*/
 }
 
 
@@ -731,7 +733,18 @@ div.person div.image img {
 	button.navbutton {
 		display: block;
 	}
-
+	div.person {
+		width: 100%;
+	}
+	div.person div.image {
+		width: auto !important;
+		float: none !important;
+	}
+	div.person div.info {
+		width: auto !important;
+		float: none !important;
+		align-content: center !important;
+	}
 }
 
 @media  screen and (max-width: 480px)  {
