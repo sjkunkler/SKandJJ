@@ -423,11 +423,14 @@ img { max-width: 100%; }
 /* 4 - Page Top Section
 ---------------------------------------------------------------------- */
 #home {
-  background: url(images/background/page-top7.jpg);
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+	background: url(../../images/background/page-top7.jpg);
+	background-repeat:no-repeat;
+	/*background-size:contain;*/
+	background-position:center;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
 }
 .site-title{
 	text-align:center;
@@ -645,7 +648,16 @@ div.person div.image img {
 /* 7 - Contact Section End
 ---------------------------------------------------------------------- */
 
+/* Registry --------------*/
 
+.registry {
+  height: auto;
+  max-width: 100%;
+  /*vertical-align: baseline;*/
+  width: auto;
+  vertical-align: middle;
+  
+}
 
 
 /* 8 - Footer Section

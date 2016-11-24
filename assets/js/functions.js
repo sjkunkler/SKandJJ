@@ -1,14 +1,3 @@
-
-/* Background Images
--------------------------------------------------------------------*/
-var  pageTopImage = jQuery('#home').data('background-image');
-if (pageTopImage) {  jQuery('#home').css({ 'background-image':'url(' + pageTopImage + ')'}); };
-
-/* Background Images End
--------------------------------------------------------------------*/
-
-
-
 /* Document Ready function
 -------------------------------------------------------------------*/
 $(document).ready(function() { 
