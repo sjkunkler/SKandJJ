@@ -43,10 +43,10 @@ Designed & Handcrafted by Zan from ninetofive.me
 	font-family: "Melany";
 }
 
-.rsvp-heading {
+.rsvp-heading, 
+.travel-heading {
 	text-align: center;
 }
-
 
 /******************************************************************
 	Menu
@@ -650,13 +650,10 @@ div.person div.image img {
 
 /* Registry --------------*/
 
-.registry {
-  height: auto;
-  max-width: 100%;
-  /*vertical-align: baseline;*/
-  width: auto;
-  vertical-align: middle;
-  
+.registry-img {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
