@@ -132,6 +132,8 @@ $(document).ready(function() {
     if(error == false){
         $('.contact-error-field').fadeOut();
 
+        $("#loader").show();
+        $("#preloader").show();
       // parameters: service_id, template_id, template_parameters
       emailjs.send("default_service","template_jgINAfrP",{
         from_name: $('#first_name').val() + " " + $('#last_name').val(), 
@@ -142,6 +144,8 @@ $(document).ready(function() {
       })
       .then(function(response) {
         console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
+        $("#loader").fadeOut();
+        $("#preloader").delay(350).fadeOut("slow");
         alert('Thank you for your RSVP!');
         $('#first_name').val('');
         $('#last_name').val('');
@@ -150,7 +154,9 @@ $(document).ready(function() {
         $('#message').val('');
       }, function(err) {
         console.log("FAILED. error=", err);
-      alert('Oops, something went wrong. Please try again later.');
+        alert('Oops, something went wrong. Please try again later.');
+        $("#loader").fadeOut();
+        $("#preloader").delay(350).fadeOut("slow");
       });
     }
   });  
